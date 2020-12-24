@@ -1172,6 +1172,7 @@ bool MobManager::aggroCheck(Mob *mob, time_t currTime) {
         Chunk* chunk = *it;
         for (CNSocket *s : chunk->players) {
             Player *plr = PlayerManager::getPlayer(s);
+            
             int lvldiff = plr->level - mob->level;
 
             if (plr->HP <= 0)
